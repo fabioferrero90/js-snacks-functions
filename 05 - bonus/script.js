@@ -6,13 +6,33 @@ e buonasera se è sera (oltre le 17)
 */
 
 const name = 'Mario';
-
+const time = new Date()
+const hours = time.getHours()
 
 // Dichiara la funzione qui.
+const saluto = firstname => {
+  if (hours < 13) {
+    return `Buongiorno ${firstname}`
+  } else if (hours < 17) {
+    return `Buon Pomeriggio ${firstname}`
+  } else {
+    return `Buonasera ${firstname}`
+  }
+}
 
+function salutoRaw(firstname) {
+  if (hours < 13) {
+    return `Buongiorno ${firstname}`
+  } else if (hours < 17) {
+    return `Buon Pomeriggio ${firstname}`
+  } else {
+    return `Buonasera ${firstname}`
+  }
+}
 
 // Invoca la funzione qui e stampa il risultato in console
 
-
+console.log(saluto(name))
+console.log(salutoRaw(name))
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.

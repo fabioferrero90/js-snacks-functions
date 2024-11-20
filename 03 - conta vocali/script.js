@@ -2,9 +2,10 @@
 
 const word = 'javascript';
 const vocali = ["a", "e", "i", "o", "u"]
-let found = 0
+
 // Dichiara la funzione qui.
 const getVocals = string => {
+  let found = 0
   for (let i = 0; i < string.length; i++) {
     const char = string.charAt(i)
     for (const element of vocali) {
@@ -13,6 +14,7 @@ const getVocals = string => {
       }
     }
   }
+  return found
 }
 
 function getVocalsRaw(string) {
@@ -29,9 +31,8 @@ function getVocalsRaw(string) {
 }
 // Invoca la funzione qui e stampa il risultato in console
 
-getVocals(word)
-console.log(found)
 
+console.log(getVocals(word))
 console.log(getVocalsRaw(word))
 
 //Risultato atteso se si passa 'javascript': 3 (a, a, i)
