@@ -2,12 +2,15 @@
 
 const name = 'Mario';
 
-
 // Dichiara la funzione qui.
+const saluto = firstname => `Ciao ${firstname}`
 
-
+function salutoRaw(firstname) {
+  return `Ciao ${firstname}`
+}
 // Invoca la funzione qui e stampa il risultato in console
 
-
+console.log(saluto(name))
+console.log(salutoRaw(name))
 
 //Risultato atteso se si passa 'Mario': // ciao Mario
